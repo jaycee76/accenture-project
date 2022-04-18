@@ -15,19 +15,22 @@ function ImageSlider() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplaySpeed: 10000,
-        autoplay: true
+        autoplay: true,
     }
 
   return (
         <Carousel {...settings} >
+            <Wrap1>
+                <a>
+                <img src="/images/CICT.png" />
+                <span>Web-based Faculty <br/>Management Information System</span>
+                </a>
+            </Wrap1>
             <Wrap>
                 <img src="/images/vision.png" />
             </Wrap>
             <Wrap>
-                <img src="/images/mission.png" />
-            </Wrap>
-            <Wrap>
-                <img src="/images/CICT.png" />
+                <img src="/images/mission.png"/>
             </Wrap>
         </Carousel>
   )
@@ -36,7 +39,8 @@ function ImageSlider() {
 export default ImageSlider
 
 const Carousel = styled(Slider)`
-    margin-top: 20px;
+    margin-top: 150px;
+    margin-left: 20px;
     
 
     ul li button {
@@ -52,6 +56,7 @@ const Carousel = styled(Slider)`
 
     .slick-list {
         overflow: hidden;
+        border: 2px solid rgba(130, 65, 66, 0.5);
     }
 
     button {
@@ -64,17 +69,32 @@ const Carousel = styled(Slider)`
 const Wrap = styled.div`
     cursor: pointer;
     img {
-        display: flex;
-        border: 4px solid transparent;
-        border-radius: 4px;
+        width: 900px;
+        height: 230px;
+        padding-top: 120px;
+    }
+
+    img2 {
+        width: 900px;
+        height: 230px;
+        padding-top: 120px;
+        padding-left: 30px;
+    }
+`
+const Wrap1 = styled.div`
+    img {
         width: 50%;
         height: 50%;
-        box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, 
-        rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-        transition-duration: 300ms;
-
-        &:hover {
-            border: 4px solid rgba(249, 249, 249, 0.8);
-        }
     }
+
+    a{
+        display: flex;
+        align-items: center;
+    }
+
+    span{
+        font-size: 70px;
+        margin-left: 20px;
+    }
+
 `
